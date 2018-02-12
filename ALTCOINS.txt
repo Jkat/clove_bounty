@@ -282,7 +282,6 @@ https://www.github.com/winkchain/wink/blob/master/src/net.cpp
 https://www.github.com/womencoin/womencoin/blob/master/src/net.cpp
 https://www.github.com/wpstudio/blazecoin/blob/master/src/net.cpp
 https://www.github.com/wurstgelee/triangles/blob/master/src/net.cpp
-https://www.github.com/x2team2017/x2/blob/master/src/net.cpp
 https://www.github.com/xenonflux/1337/blob/master/src/net.cpp
 https://www.github.com/xonecoin/xonecoin/blob/master/src/net.cpp
 https://www.github.com/xptx/platinumbar/blob/master/src/chainparams.cpp
