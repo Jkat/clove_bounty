@@ -10,7 +10,6 @@ https://www.github.com/bolivarcoin/bolivarcoin/blob/master/src/net.cpp
 https://www.github.com/borzalom/xtrabytes/blob/master/src/net.cpp
 https://www.github.com/bowscoin/bowscoin/blob/master/src/net.cpp
 https://www.github.com/bta-bata/bata-source/blob/master/src/chainparams.cpp
-https://www.github.com/btcgpu/btcgpu/blob/master/src/chainparams.cpp
 https://www.github.com/bumbacoin/bumbacoin2-source/blob/master/src/net.cpp
 https://www.github.com/bumbacoin/xgox/blob/master/src/net.cpp
 https://www.github.com/butterrose/xios/blob/master/src/chainparams.cpp
