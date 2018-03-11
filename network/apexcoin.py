@@ -9,10 +9,16 @@ class ApexCoin(Bitcoin):
     """
     name = 'ApexCoin'
     symbols = ('APEX', )
-    seeds =  ("62.116.254.204",
-              "162.243.118.225",
-              "5.9.23.116",
-              "67.215.11.195")
+    nodes = ("62.116.254.204",
+             "162.243.118.225",
+             "5.9.23.116",
+             "67.215.11.195")
     port = 19971
-	
+    message_start = b'\x70\x35\x22\x05'
+    base58_prefixes = {
+        'PUBKEY_ADDR': 23,
+        'SCRIPT_ADDR': 83,
+        'SECRET_KEY': 151
+    }
+
 # Has no testnet

@@ -10,16 +10,11 @@ class Riecoin(Bitcoin):
     """
     name = 'riecoin'
     symbols = ('RIC', )
-    seeds = ('seed.bitcoin.sipa.be',)
+    seeds = ('seed.bitcoin.sipa.be', )
     port = 28333
-
-
-class RiecoinTestNet(Riecoin):
-    """
-    Class with all the necessary RIC testing network information based on
-    http://www.github.com/riecoin/riecoin/blob/master/src/chainparams.cpp
-    (date of access: 02/11/2018)
-    """
-    name = 'test-riecoin'
-    seeds = ()
-    port = 38333
+    message_start = b'\xfc\xbc\xb2\xdb'
+    base58_prefixes = {
+        'PUBKEY_ADDR': 60,
+        'SCRIPT_ADDR': 5,
+        'SECRET_KEY': 128
+    }

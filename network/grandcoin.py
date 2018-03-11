@@ -9,7 +9,12 @@ class GrandCoin(Bitcoin):
     """
     name = 'grandcoin'
     symbols = ('GDC', )
-    seeds = ("dnsseed.grandcoinpool.org", "dnsseed.bytesized-vps.com", "dnsseed.ltc.xurious.com")
+    seeds = ("dnsseed.grandcoinpool.org",
+             "dnsseed.bytesized-vps.com", "dnsseed.ltc.xurious.com")
     port = 12377
-
-
+    message_start = b'\xfd\xc1\xa5\xdb'
+    base58_prefixes = {
+        'PUBKEY_ADDR': 97,
+        'SCRIPT_ADDR': 5,
+        'SECRET_KEY': 225
+    }

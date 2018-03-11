@@ -9,7 +9,13 @@ class Autumncoin(Bitcoin):
     """
     name = 'autumncoin'
     symbols = ('ATM', )
-    seeds =  ("192.241.204.48")
+    nodes = ("192.241.204.48", )
     port = 58851
-	
+    message_start = b'\x55\x52\x12\x0d'
+    base58_prefixes = {
+        'PUBKEY_ADDR': 23,
+        'SCRIPT_ADDR': 28,
+        'SECRET_KEY': 151
+    }
+
 # Has no testnet

@@ -10,8 +10,14 @@ class Aricoin(Bitcoin):
     """
     name = 'aricoin'
     symbols = ('ARI', )
-    seeds = ('seed.aricoin.com',)
+    seeds = ('seed.aricoin.com', )
     port = 16567
+    message_start = b'\xc2\xdb\xf1\xfd'
+    base58_prefixes = {
+        'PUBKEY_ADDR': 11,
+        'SCRIPT_ADDR': 22,
+        'SECRET_KEY': 158
+    }
 
 
 class AricoinTestNet(Aricoin):
@@ -21,5 +27,12 @@ class AricoinTestNet(Aricoin):
     (date of access: 02/11/2018)
     """
     name = 'test-aricoin'
-    seeds = ('seed.mophides.com', 'seed.dglibrary.org', 'seed.arichain.info', 'testari-seed.lionservers.de', 'testari-seed-static.lionservers.de')
+    seeds = ('seed.mophides.com', 'seed.dglibrary.org', 'seed.arichain.info',
+             'testari-seed.lionservers.de', 'testari-seed-static.lionservers.de')
     port = 26567
+    message_start = b'\xc2\xdb\xf1\xfd'
+    base58_prefixes = {
+        'PUBKEY_ADDR': 11,
+        'SCRIPT_ADDR': 196,
+        'SECRET_KEY': 241
+    }

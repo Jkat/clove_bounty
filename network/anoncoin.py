@@ -9,10 +9,16 @@ class Anoncoin(Bitcoin):
     """
     name = 'Anoncoin'
     symbols = ('ANC', )
-    seeds =  ("seed.frank2.net",
-              "dnsseed03.anoncoin.net",
-              "anc.dnsseed01.anoncoin.darkgamex.ch")
+    seeds = ("seed.frank2.net",
+             "dnsseed03.anoncoin.net",
+             "anc.dnsseed01.anoncoin.darkgamex.ch")
     port = 9377
-	
-   
+    message_start = b'\xfa\xca\xba\xda'
+    base58_prefixes = {
+        'PUBKEY_ADDR': 23,
+        'SCRIPT_ADDR': 5,
+        'SECRET_KEY': 151
+    }
+
+
 # No testnet

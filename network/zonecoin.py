@@ -9,8 +9,14 @@ class Zonecoin(Bitcoin):
     """
     name = 'zonecoin'
     symbols = ('ZNE', )
-    seeds = ("46.101.95.7", "146.185.147.21")
+    nodes = ("46.101.95.7", "146.185.147.21", )
     port = 7901
+    message_start = b'\x4e\x64\x92\x74'
+    base58_prefixes = {
+        'PUBKEY_ADDR': 80,
+        'SCRIPT_ADDR': 85,
+        'SECRET_KEY': 208
+    }
 
 
 # Has no testnet

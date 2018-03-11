@@ -9,8 +9,14 @@ class Kurrent(Bitcoin):
     """
     name = 'kurrent'
     symbols = ('KURT', )
-    seeds = ('212.24.107.99')
+    nodes = ('212.24.107.99', )
     port = 18080
+    message_start = b'\xdb\xc3\xfa\xfc'
+    base58_prefixes = {
+        'PUBKEY_ADDR': 45,
+        'SCRIPT_ADDR': 17,
+        'SECRET_KEY': 173
+    }
 
 
 # Has no testnet

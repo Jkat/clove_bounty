@@ -9,8 +9,14 @@ class UltraCoin(Bitcoin):
     """
     name = 'ultracoin'
     symbols = ('UTC', )
-    seeds = ("utcseed.presstab.pw")
+    seeds = ("utcseed.presstab.pw", )
     port = 44100
+    message_start = b'\xd9\xe6\xe7\xf5'
+    base58_prefixes = {
+        'PUBKEY_ADDR': 68,
+        'SCRIPT_ADDR': 6,
+        'SECRET_KEY': 196
+    }
 
 
 # Has no testnet

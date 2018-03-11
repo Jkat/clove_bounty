@@ -9,8 +9,13 @@ class CryptoBullion(Bitcoin):
     """
     name = 'cryptobullion'
     symbols = ('CBX', )
-    seeds =  ("seed.cryptobullion.io")
+    seeds = ("seed.cryptobullion.io", )
     port = 7695
-	
-	
+    message_start = b'\xe4\xe8\xe9\xe5'
+    base58_prefixes = {
+        'PUBKEY_ADDR': 11,
+        'SCRIPT_ADDR': 8,
+        'SECRET_KEY': 139
+    }
+
 # Has no Testnet

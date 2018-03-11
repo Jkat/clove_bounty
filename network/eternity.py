@@ -10,8 +10,14 @@ class Eternity(Bitcoin):
     """
     name = 'eternity'
     symbols = ('ENT', )
-    seeds = ('dnsseed.eternity-group.org',)
+    seeds = ('dnsseed.eternity-group.org', )
     port = 4855
+    message_start = b'\x8f\xf7\x4d\x2e'
+    base58_prefixes = {
+        'PUBKEY_ADDR': 33,
+        'SCRIPT_ADDR': 8,
+        'SECRET_KEY': 101
+    }
 
 
 class EternityTestNet(Eternity):
@@ -21,5 +27,11 @@ class EternityTestNet(Eternity):
     (date of access: 02/11/2018)
     """
     name = 'test-eternity'
-    seeds = ('144.76.33.134',)
+    nodes = ('144.76.33.134', )
     port = 14855
+    message_start = b'\xc3\xb3\xea\x5b'
+    base58_prefixes = {
+        'PUBKEY_ADDR': 93,
+        'SCRIPT_ADDR': 10,
+        'SECRET_KEY': 239
+    }

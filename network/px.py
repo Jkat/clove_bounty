@@ -9,8 +9,14 @@ class PX(Bitcoin):
     """
     name = 'px'
     symbols = ('PX', )
-    seeds = ('PX.freestaking.com')
+    seeds = ('PX.freestaking.com', )
     port = 9232
+    message_start = b'\xa3\xb3\xc2\xd3'
+    base58_prefixes = {
+        'PUBKEY_ADDR': 56,
+        'SCRIPT_ADDR': 117,
+        'SECRET_KEY': 184
+    }
 
 
 # Has no testnet

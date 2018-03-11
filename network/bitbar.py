@@ -9,6 +9,11 @@ class BitBar(Bitcoin):
     """
     name = 'BitBar'
     symbols = ('BTB', )
-    seeds = ('btb.altcointech.net')
+    seeds = ('btb.altcointech.net', )
     port = 8777
-
+    message_start = b'\xe4\xe8\xe9\xe5'
+    base58_prefixes = {
+        'PUBKEY_ADDR': 25,
+        'SCRIPT_ADDR': 30,
+        'SECRET_KEY': 153
+    }

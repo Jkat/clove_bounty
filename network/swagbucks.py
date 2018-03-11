@@ -10,16 +10,11 @@ class SwagBucks(Bitcoin):
     """
     name = 'swagbucks'
     symbols = ('BUCKS', )
-    seeds = ('', '')
+    seeds = ('', '', )
     port = 1337
-
-
-class SwagBucksTestNet(SwagBucks):
-    """
-    Class with all the necessary BUCKS testing network information based on
-    http://www.github.com/pinkmagicdev/SwagBucks/blob/master/src/chainparams.cpp
-    (date of access: 02/11/2018)
-    """
-    name = 'test-swagbucks'
-    seeds = ()
-    port = 2337
+    message_start = b'\x70\x35\x22\x05'
+    base58_prefixes = {
+        'PUBKEY_ADDR': 63,
+        'SCRIPT_ADDR': 125,
+        'SECRET_KEY': 153
+    }

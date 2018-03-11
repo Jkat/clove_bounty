@@ -10,16 +10,12 @@ class Unify(Bitcoin):
     """
     name = 'unify'
     symbols = ('UNIFY', )
-    seeds = ('95.85.59.180', '145.239.89.215', '158.69.212.99', 'node1.unifycoin.ovh', 'node2.unifycoin.ovh', 'node3.unifycoin.ovh', 'node1.unifycoin.pl', 'node2.unifycoin.pl', 'node3.unifycoin.pl')
+    seeds = ('node1.unifycoin.ovh', 'node2.unifycoin.ovh',
+             'node3.unifycoin.ovh', 'node1.unifycoin.pl', 'node2.unifycoin.pl', 'node3.unifycoin.pl')
     port = 18649
-
-
-class UnifyTestNet(Unify):
-    """
-    Class with all the necessary UNIFY testing network information based on
-    http://www.github.com/SBDomains/unify-source/blob/master/src/net.cpp
-    (date of access: 02/12/2018)
-    """
-    name = 'test-unify'
-    seeds = ()
-    port = 28649
+    message_start = b'\xc4\x47\xf9\xee'
+    base58_prefixes = {
+        'PUBKEY_ADDR': 68,
+        'SCRIPT_ADDR': 5,
+        'SECRET_KEY': 196
+    }

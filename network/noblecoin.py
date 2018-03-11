@@ -9,8 +9,14 @@ class NobleCoin(Bitcoin):
     """
     name = 'noblecoin'
     symbols = ('NOBL', )
-    seeds = ('nobl.poolerino.com')
+    seeds = ('nobl.poolerino.com', )
     port = 55884
+    message_start = b'\xc0\xdb\xf1\xfd'
+    base58_prefixes = {
+        'PUBKEY_ADDR': 21,
+        'SCRIPT_ADDR': 5,
+        'SECRET_KEY': 149
+    }
 
 
 # Has no testnet

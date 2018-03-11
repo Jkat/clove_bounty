@@ -9,8 +9,14 @@ class Printerium(Bitcoin):
     """
     name = 'printerium'
     symbols = ('PRX', )
-    seeds = ("199.127.227.51")
+    nodes = ("199.127.227.51", )
     port = 10321
+    message_start = b'\x0d\x37\x3b\x52'
+    base58_prefixes = {
+        'PUBKEY_ADDR': 55,
+        'SCRIPT_ADDR': 85,
+        'SECRET_KEY': 183
+    }
 
 
 # Has no testnet

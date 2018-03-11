@@ -19,19 +19,11 @@ class Gaycoin(Bitcoin):
         'seed07.gay.money',
         'seed08.gay.money',
         'seed09.gay.money',
-        '91.121.67.93',
-        '138.68.237.158',
-        '91.109.38.231',
     )
     port = 24241
-
-
-class GaycoinTestNet(Gaycoin):
-    """
-    Class with all the necessary GAY testing network information based on
-    https://github.com/gaycoins/gaycoin-online/blob/master/src/net.cpp
-    (date of access: 02/12/2018)
-    """
-    name = 'test-gaycoin'
-    seeds = ()
-    port = 33542
+    message_start = b'\xf1\xe0\xa2\xd3'
+    base58_prefixes = {
+        'PUBKEY_ADDR': 97,
+        'SCRIPT_ADDR': 38,
+        'SECRET_KEY': 225
+    }

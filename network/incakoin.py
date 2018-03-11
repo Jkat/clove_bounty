@@ -9,8 +9,14 @@ class IncaKoin(Bitcoin):
     """
     name = 'incakoin'
     symbols = ('NKA', )
-    seeds = ('81.100.233.136')
+    nodes = ('81.100.233.136', )
     port = 17421
+    message_start = b'\xe4\xe8\xe9\xe5'
+    base58_prefixes = {
+        'PUBKEY_ADDR': 53,
+        'SCRIPT_ADDR': 30,
+        'SECRET_KEY': 181
+    }
 
 
 # Has no testnet

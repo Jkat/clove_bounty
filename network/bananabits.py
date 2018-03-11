@@ -9,7 +9,13 @@ class BananaBits(Bitcoin):
     """
     name = 'bananabits'
     symbols = ('NANAS', )
-    seeds =  ("seed.bananabits.website")
+    seeds = ("seed.bananabits.website", )
     port = 31341
-	
+    message_start = b'\x1f\xcd\x2d\x3a'
+    base58_prefixes = {
+        'PUBKEY_ADDR': 25,
+        'SCRIPT_ADDR': 85,
+        'SECRET_KEY': 153
+    }
+
 # Has no testnet

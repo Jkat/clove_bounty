@@ -9,9 +9,12 @@ class ArtexCoin(Bitcoin):
     """
     name = 'artexcoin'
     symbols = ('ATX', )
-    seeds =  ("162.243.85.154",
-              "162.243.99.178",
-              "seed3.cryptolife.net",
-              "electrum3.cryptolife.net")
+    seeds = ("seed3.cryptolife.net",
+             "electrum3.cryptolife.net")
     port = 14584
-	
+    message_start = b'\xfa\xc3\xbf\xde'
+    base58_prefixes = {
+        'PUBKEY_ADDR': 23,
+        'SCRIPT_ADDR': 5,
+        'SECRET_KEY': 151
+    }

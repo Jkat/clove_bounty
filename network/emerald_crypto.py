@@ -10,8 +10,14 @@ class EmeraldCrypto(Bitcoin):
     """
     name = 'emerald-crypto'
     symbols = ('EMD', )
-    seeds = ('emeraldcrypto.co',)
+    seeds = ('emeraldcrypto.co', )
     port = 12127
+    message_start = b'\xfb\xc0\xb6\xdb'
+    base58_prefixes = {
+        'PUBKEY_ADDR': 34,
+        'SCRIPT_ADDR': 5,
+        'SECRET_KEY': 162
+    }
 
 
 class EmeraldCryptoTestNet(EmeraldCrypto):
@@ -21,5 +27,11 @@ class EmeraldCryptoTestNet(EmeraldCrypto):
     (date of access: 02/12/2018)
     """
     name = 'test-emerald-crypto'
-    seeds = ('testnet.emeraldcrypto.co',)
+    seeds = ('testnet.emeraldcrypto.co', )
     port = 22127
+    message_start = b'\xfc\xc1\xb7\xdc'
+    base58_prefixes = {
+        'PUBKEY_ADDR': 111,
+        'SCRIPT_ADDR': 196,
+        'SECRET_KEY': 239
+    }

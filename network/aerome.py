@@ -9,12 +9,18 @@ class AeroMe(Bitcoin):
     """
     name = 'aerome'
     symbols = ('AM', )
-    seeds =  ("aerome.publicvm.com",
-              "aerome2.publicvm.com",
-              "aerome3.publicvm.com",
-              "aerome4.publicvm.com",
-              "aerome5.publicvm.com")
+    seeds = ("aerome.publicvm.com",
+             "aerome2.publicvm.com",
+             "aerome3.publicvm.com",
+             "aerome4.publicvm.com",
+             "aerome5.publicvm.com")
     port = 6221
-	
-   
+    message_start = b'\x2d\x3f\xa2\xf5'
+    base58_prefixes = {
+        'PUBKEY_ADDR': 23,
+        'SCRIPT_ADDR': 85,
+        'SECRET_KEY': 151
+    }
+
+
 # Has no testnet

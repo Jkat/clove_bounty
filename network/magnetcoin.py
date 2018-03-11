@@ -9,8 +9,14 @@ class Magnetcoin(Bitcoin):
     """
     name = 'magnetcoin'
     symbols = ('MAGN', )
-    seeds = ('96.44.173.109')
+    nodes = ('96.44.173.109', )
     port = 22458
+    message_start = b'\xa4\xd2\xf8\xa6'
+    base58_prefixes = {
+        'PUBKEY_ADDR': 51,
+        'SCRIPT_ADDR': 50,
+        'SECRET_KEY': 179
+    }
 
 
 # Has no testnet

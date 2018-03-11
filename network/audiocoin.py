@@ -10,8 +10,14 @@ class AudioCoin(Bitcoin):
     """
     name = 'audiocoin'
     symbols = ('ADC', )
-    seeds = ('52.56.111.222', '52.56.175.189', '35.176.14.149')
+    nodes = ('52.56.111.222', '52.56.175.189', '35.176.14.149', )
     port = 25159
+    message_start = b'\xfa\xf4\xfb\xff'
+    base58_prefixes = {
+        'PUBKEY_ADDR': 23,
+        'SCRIPT_ADDR': 125,
+        'SECRET_KEY': 151
+    }
 
 
 class AudioCoinTestNet(AudioCoin):
@@ -21,5 +27,12 @@ class AudioCoinTestNet(AudioCoin):
     (date of access: 02/11/2018)
     """
     name = 'test-audiocoin'
-    seeds = ('178.62.233.116', 'adcseed.presstab.pw')
+    seeds = ('adcseed.presstab.pw', )
+    nodes = ()
     port = 25159
+    message_start = b'\xfa\xf4\xfb\xff'
+    base58_prefixes = {
+        'PUBKEY_ADDR': 111,
+        'SCRIPT_ADDR': 196,
+        'SECRET_KEY': 239
+    }

@@ -9,8 +9,14 @@ class SportsCoin(Bitcoin):
     """
     name = 'sportscoin'
     symbols = ('SPORT', )
-    seeds = ("63.142.255.39")
+    nodes = ("63.142.255.39", )
     port = 42986
+    message_start = b'\xaa\xa2\xb2\xc4'
+    base58_prefixes = {
+        'PUBKEY_ADDR': 63,
+        'SCRIPT_ADDR': 28,
+        'SECRET_KEY': 191
+    }
 
 
 # Has no testnet

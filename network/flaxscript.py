@@ -10,8 +10,14 @@ class Flaxscript(Bitcoin):
     """
     name = 'flaxscript'
     symbols = ('FLAX', )
-    seeds = ('192.99.37.133', '84.200.4.67', '213.32.98.226')
+    nodes = ('192.99.37.133', '84.200.4.67', '213.32.98.226', )
     port = 17235
+    message_start = b'\x01\x07\x02\x03'
+    base58_prefixes = {
+        'PUBKEY_ADDR': 43,
+        'SCRIPT_ADDR': 4,
+        'SECRET_KEY': 156
+    }
 
 
 class FlaxscriptTestNet(Flaxscript):
@@ -21,5 +27,11 @@ class FlaxscriptTestNet(Flaxscript):
     (date of access: 02/11/2018)
     """
     name = 'test-flaxscript'
-    seeds = ('',)
+    seeds = ('', )
     port = 23990
+    message_start = b'\xfb\xc2\x11\x02'
+    base58_prefixes = {
+        'PUBKEY_ADDR': 105,
+        'SCRIPT_ADDR': 44,
+        'SECRET_KEY': 216
+    }

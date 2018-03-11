@@ -9,13 +9,13 @@ class AlpaCoin(Bitcoin):
     """
     name = 'alpacoin'
     symbols = ('APC', )
-    seeds =  ("seed1.cryptolife.net",
-              "seed2.cryptolife.net",
-              "explore.cryptolife.net",
-              "wallet.cryptolife.net")
+    seeds = ("seed1.cryptolife.net",
+             "seed2.cryptolife.net",
+             "explore.cryptolife.net",
+             "wallet.cryptolife.net")
     port = 12873
-	
-   
+
+
 class AlpaCoinTestNet(AlpaCoin):
     """
     Class with all the necessary AlpaCoin testing network information based on
@@ -23,7 +23,5 @@ class AlpaCoinTestNet(AlpaCoin):
     (date of access: 02/13/2018)
     """
     name = 'test-alpacoin'
-    seeds = ("test.AlpaCoin.org")
-    port = 11835              
-	
-
+    seeds = ("test.AlpaCoin.org", )
+    port = 11835

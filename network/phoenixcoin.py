@@ -9,8 +9,15 @@ class Phoenixcoin(Bitcoin):
     """
     name = 'phoenixcoin'
     symbols = ('PXC', )
-    seeds = ('seed0.phoenixcoin.org','seed1.phoenixcoin.org','seed2.phoenixcoin.org')
+    seeds = ('seed0.phoenixcoin.org',
+             'seed1.phoenixcoin.org', 'seed2.phoenixcoin.org')
     port = 9555
+    message_start = b'\xfe\xd0\xd8\xc3'
+    base58_prefixes = {
+        'PUBKEY_ADDR': 56,
+        'SCRIPT_ADDR': 5,
+        'SECRET_KEY': 184
+    }
 
 
 # Has no testnet

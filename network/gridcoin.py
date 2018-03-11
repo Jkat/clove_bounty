@@ -9,8 +9,15 @@ class Gridcoin(Bitcoin):
     """
     name = 'Gridcoin'
     symbols = ('GRC', )
-    seeds = ("node.gridcoin.us","london.grcnode.co.uk","gridcoin.crypto.fans","www.grcpool.com","nuad.de","seeds.gridcoin.ifoggz-network.xyz")
+    seeds = ("node.gridcoin.us", "london.grcnode.co.uk", "gridcoin.crypto.fans",
+             "www.grcpool.com", "nuad.de", "seeds.gridcoin.ifoggz-network.xyz")
     port = 32749
+    message_start = b'\x70\x35\x22\x05'
+    base58_prefixes = {
+        'PUBKEY_ADDR': 62,
+        'SCRIPT_ADDR': 85,
+        'SECRET_KEY': 190
+    }
 
 
 # Has no testnet

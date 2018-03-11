@@ -17,14 +17,9 @@ class Paypeer(Bitcoin):
         'ok1.altcoinsfoundation.com',
     )
     port = 33714
-
-
-class PaypeerTestNet(Paypeer):
-    """
-    Class with all the necessary PAYP testing network information based on
-    https://github.com/paypeer/paypeer/blob/master/src/net.cpp
-    (date of access: 02/12/2018)
-    """
-    name = 'test-paypeer'
-    seeds = ()
-    port = 33715
+    message_start = b'\x13\x02\x1b\x3c'
+    base58_prefixes = {
+        'PUBKEY_ADDR': 56,
+        'SCRIPT_ADDR': 50,
+        'SECRET_KEY': 184
+    }

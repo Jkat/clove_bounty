@@ -10,16 +10,11 @@ class Zeitcoin(Bitcoin):
     """
     name = 'zeitcoin'
     symbols = ('ZEIT', )
-    seeds = ('seed.zeit-coin.net', 'zeitseed2.ddns.net', 'seed.aeternity.cc')
+    seeds = ('seed.zeit-coin.net', 'zeitseed2.ddns.net', 'seed.aeternity.cc', )
     port = 44845
-
-
-class ZeitcoinTestNet(Zeitcoin):
-    """
-    Class with all the necessary ZEIT testing network information based on
-    https://github.com/zeitcoin/zeitcoin/blob/master/src/net.cpp
-    (date of access: 02/12/2018)
-    """
-    name = 'test-zeitcoin'
-    seeds = ()
-    port = 22788
+    message_start = b'\xce\xd5\xdb\xfa'
+    base58_prefixes = {
+        'PUBKEY_ADDR': 51,
+        'SCRIPT_ADDR': 8,
+        'SECRET_KEY': 179
+    }

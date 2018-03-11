@@ -1,4 +1,3 @@
-
 from clove.network.bitcoin import Bitcoin
 
 
@@ -10,8 +9,14 @@ class GlobalBoostY(Bitcoin):
     """
     name = 'globalboosty'
     symbols = ('BSTY', )
-    seeds = ('seeder.globalboost.info', 'seeder2.globalboost.info')
+    seeds = ('seeder.globalboost.info', 'seeder2.globalboost.info', )
     port = 8226
+    message_start = b'\xa2\xb2\xe2\xf2'
+    base58_prefixes = {
+        'PUBKEY_ADDR': 77,
+        'SCRIPT_ADDR': 139,
+        'SECRET_KEY': 205
+    }
 
 
 class GlobalBoostYTestNet(GlobalBoostY):
@@ -21,5 +26,11 @@ class GlobalBoostYTestNet(GlobalBoostY):
     (date of access: 02/12/2018)
     """
     name = 'test-globalboost-y'
-    seeds = ('testnet-seeder.globalboost.info',)
+    seeds = ('testnet-seeder.globalboost.info', )
     port = 18226
+    message_start = b'bsty'
+    base58_prefixes = {
+        'PUBKEY_ADDR': 111,
+        'SCRIPT_ADDR': 196,
+        'SECRET_KEY': 239
+    }

@@ -9,8 +9,7 @@ class MaoZedong(Bitcoin):
     """
     name = 'maozedong'
     symbols = ('MAO', )
-    seeds = ("45.76.47.47",
-             "explorer.mao-zedong.net",
+    seeds = ("explorer.mao-zedong.net",
              "node1.mao-zedong.net",
              "node2.mao-zedong.net",
              "node3.mao-zedong.net",
@@ -25,6 +24,12 @@ class MaoZedong(Bitcoin):
              "dnsseed4.mao-zedong.net",
              "dnsseed5.mao-zedong.net")
     port = 9670
+    message_start = b'\xf4\xd3\x35\xf1'
+    base58_prefixes = {
+        'PUBKEY_ADDR': 50,
+        'SCRIPT_ADDR': 28,
+        'SECRET_KEY': 178
+    }
 
 
 # Has no testnet

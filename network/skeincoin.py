@@ -10,16 +10,13 @@ class Skeincoin(Bitcoin):
     """
     name = 'skeincoin'
     symbols = ('SKC', )
-    seeds = ('seed-a.skeincoin.net', 'seed-b.skeincoin.net', 'seed-c.skeincoin.net', 'seed-d.skeincoin.net', 'seed-e.skeincoin.net', 'seed-f.skeincoin.net', 'seed-g.skeincoin.net', 'seed-h.skeincoin.net', 'skein1.ignorelist.com', 'skein2.ignorelist.com', 'skein3.ignorelist.com')
+    seeds = ('seed-a.skeincoin.net', 'seed-b.skeincoin.net', 'seed-c.skeincoin.net', 'seed-d.skeincoin.net',
+             'seed-e.skeincoin.net', 'seed-f.skeincoin.net', 'seed-g.skeincoin.net', 'seed-h.skeincoin.net',
+             'skein1.ignorelist.com', 'skein2.ignorelist.com', 'skein3.ignorelist.com')
     port = 11230
-
-
-class SkeincoinTestNet(Skeincoin):
-    """
-    Class with all the necessary SKC testing network information based on
-    http://www.github.com/skeincoin/skeincoin/blob/master/src/chainparams.cpp
-    (date of access: 02/11/2018)
-    """
-    name = 'test-skeincoin'
-    seeds = ()
-    port = 27711
+    message_start = b'\xf7\x26\xa1\xbf'
+    base58_prefixes = {
+        'PUBKEY_ADDR': 63,
+        'SCRIPT_ADDR': 12,
+        'SECRET_KEY': 226
+    }

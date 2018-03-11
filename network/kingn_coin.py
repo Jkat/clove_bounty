@@ -9,8 +9,14 @@ class KingNCoin(Bitcoin):
     """
     name = 'kingncoin'
     symbols = ('KNC', )
-    seeds = ("node.walletbuilders.com")
+    seeds = ("node.walletbuilders.com", )
     port = 18373
+    message_start = b'\xfc\x4c\x87\x36'
+    base58_prefixes = {
+        'PUBKEY_ADDR': 45,
+        'SCRIPT_ADDR': 85,
+        'SECRET_KEY': 173
+    }
 
 
 # Has no testnet

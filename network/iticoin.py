@@ -9,9 +9,16 @@ class iTicoin(Bitcoin):
     """
     name = 'iTicoin'
     symbols = ('ITI', )
-    seeds = ("seed1.super-ppl.com","seed2.super-ppl.com","seed3.super-ppl.com")
+    seeds = ("seed1.super-ppl.com",
+             "seed2.super-ppl.com", "seed3.super-ppl.com")
     port = 42177
+    message_start = b'\xe4\xe8\xe9\xe5'
+    base58_prefixes = {
+        'PUBKEY_ADDR': 65,
+        'SCRIPT_ADDR': 20,
+        'SECRET_KEY': 193
+    }
 
 
 # Has no testnet
-("seed1.super-ppl.com","seed2.super-ppl.com","seed3.super-ppl.com")
+("seed1.super-ppl.com", "seed2.super-ppl.com", "seed3.super-ppl.com")
