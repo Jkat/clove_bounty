@@ -25,7 +25,7 @@ class DBGoldTestNet(DBGold):
     """
     Class with all the necessary DBG testing network information based on
     https://github.com/dbgold/dbgold/blob/master/src/net.cpp
-    (date of access: 01/18/2018)
+    (date of access: 03/11/2018)
     """
     name = 'test-dbgold'
     seeds = ()
