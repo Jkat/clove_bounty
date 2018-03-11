@@ -5,7 +5,7 @@ class TrickyCoin(Bitcoin):
     """
     Class with all the necessary TrickyCoin network information based on
     https://www.github.com/trickycoin/trickycoin/blob/master/src/net.cpp
-    (date of access: 02/12/2018)
+    (date of access: 03/11/2018)
     """
     name = 'trickycoin'
     symbols = ('TRICK', )
