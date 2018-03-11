@@ -4,7 +4,7 @@ from clove.network.bitcoin import Bitcoin
 class TrickyCoin(Bitcoin):
     """
     Class with all the necessary TrickyCoin network information based on
-    https://github.com/beatscoindev/beatscoinv2/blob/master/src/net.cpp
+    https://www.github.com/trickycoin/trickycoin/blob/master/src/net.cpp
     (date of access: 02/12/2018)
     """
     name = 'trickycoin'
